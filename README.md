@@ -3,9 +3,8 @@
 # ----PyTorch 深度学习学习笔记（新手可轻松复现版）
 [![GitHub](https://img.shields.io/badge/GitHub-Jackksonns-blue?style=flat-square&logo=github)](https://github.com/Jackksonns) [![GitHub stars](https://img.shields.io/github/stars/Jackksonns/pytorch-deep-learning-notes)](https://github.com/Jackksonns/pytorch-deep-learning-notes/stargazers) [![GitHub forks](https://img.shields.io/github/forks/Jackksonns/pytorch-deep-learning-notes)](https://github.com/Jackksonns/pytorch-deep-learning-notes/network/members)
 
-------
 <div align="center">
-  <img src="assets/arch.png" width="800" alt="Project Architecture" />
+  <img src="assets/arch.png" width="999" alt="Project Architecture" />
 </div>
 <br>
 
@@ -130,4 +129,5 @@ pip install -r requirements.txt
 ## ⭐ 如果你觉得这个仓库对你有帮助，请点个Star叭！你的支持是我们持续更新与分享的动力。
 
 **Contact me**: [Jackksonns (Jackson KK)](https://github.com/Jackksonns).
+
 
