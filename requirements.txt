@@ -1,0 +1,12 @@
+torch>=1.8.0
+torchvision>=0.9.0
+numpy
+pandas
+matplotlib
+scikit-learn
+Pillow
+scipy
+tqdm
+requests
+tensorboard
+einops
