@@ -112,7 +112,7 @@ pip install -r requirements.txt
 
 ## To-do List
 
--  增加更多前沿架构（如 Swin Transformer）
+-  增加更多前沿架构
 -  实现更多 NLP 模型
 -  补充强化学习示例
 
@@ -126,7 +126,7 @@ pip install -r requirements.txt
 
 ## ⭐ 如果你觉得这个仓库对你有帮助，请点个Star叭！你的支持是我们持续更新与分享的动力。
 
-**Contact me**: [Jackksonns (Jackson KK)](https://github.com/Jackksonns).
+**Contact me**: [Jackksonns (Jackson ZHOU)](https://github.com/Jackksonns).
 
 
 
