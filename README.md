@@ -126,7 +126,7 @@ pip install -r requirements.txt
 
 ## ⭐ 如果你觉得这个仓库对你有帮助，请点个Star叭！你的支持是我们持续更新与分享的动力。
 
-**Contact me**: [Jackksonns (Jackson ZHOU)](https://github.com/Jackksonns).
+**Contact me**: [Jackson ZHOU](https://github.com/Jackksonns).
 
 
 
