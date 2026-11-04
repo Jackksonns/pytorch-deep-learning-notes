@@ -1,0 +1,13 @@
+# Python / IDE
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+# 新增实验数据、缓存和模型权重
+**/data/
+**/results/*.pth
+**/results/*.pt
+**/results/*.bin
+*.log
