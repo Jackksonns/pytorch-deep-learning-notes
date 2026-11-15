@@ -4,11 +4,12 @@
 [![GitHub Stars](https://img.shields.io/github/stars/Jackksonns/pytorch-deep-learning-notes)](https://github.com/Jackksonns/pytorch-deep-learning-notes/stargazers)
 
 <div align="center">
-  <img src="assets/arch20261104.png" width="999" alt="PyTorch Deep Learning Notes Architecture" />
+  <img src="assets/arch20261115.png" width="999" alt="PyTorch Deep Learning Notes Architecture" />
 </div>
 
 ## 🔥 News
 
+- **2026.11.15** — 新增 [RNN、LSTM、TextCNN 与经典 NLP 任务](NLP_Basics/NLP_Basics.md)。
 - **2026.11.04** — 新增 [Mini-GPT](Mini-GPT/GPT.md)、[ViT](经典网络架构/ViT/ViT.md)、[CLIP](CLIP/CLIP.md) 和 [DDPM](自编码器/DDPM/DDPM.md) 学习模块。
 
 ---
@@ -39,6 +40,7 @@
 - **GoogLeNet**：使用 Inception 模块构建多分支网络。
 - **ResNet**：通过残差连接训练更深的网络。
 - **ViT (Vision Transformer)**：基于 Transformer 的图像分类模型。
+- **[CNN 基础](经典网络架构/CNN_Basics/CNN.md)**：以合成图片学习二维卷积、池化与分类。
 
 ### 3. 计算机视觉与多模态 (Computer Vision & Multimodal Learning)
 
@@ -55,6 +57,7 @@
 
 ### 4. 自然语言处理 (Natural Language Processing)
 
+- **[经典序列模型与任务](NLP_Basics/NLP_Basics.md)**：手写 RNN、LSTM，学习 BiLSTM、TextCNN、序列标注与 Encoder–Decoder。TextCNN 沿词序列做一维卷积；上述的图像 CNN 沿高、宽做二维卷积。
 - **`transformer/`**：多头注意力机制（MHA）、位置编码等 Transformer 核心组件。
 - **`bert/`**：BERT 预训练（`bert_pretrain.py`）与 SNLI 数据集微调（`bert_finetuning/`）。
 - **Mini-GPT**：基于 Decoder-only Transformer 的自回归语言模型。
@@ -99,6 +102,8 @@ python Mini-GPT/GPT.py
 python 经典网络架构/ViT/ViT.py
 python CLIP/contrastive_loss.py
 python 自编码器/DDPM/DDPM.py
+python NLP_Basics/language_model.py --demo
+python 经典网络架构/CNN_Basics/CNN.py --demo
 ```
 
 PS：CLIP 的预训练模型推理需要额外下载模型权重。
