@@ -1,4 +1,4 @@
-"""字符级下一词元预测：比较手写 RNN 与 LSTM。"""
+"""字符级下一词元预测：手写 RNN、LSTM 与 GRU。"""
 import argparse
 import torch
 from torch import nn
@@ -50,8 +50,8 @@ def demo(cell="rnn", steps=12):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--demo", action="store_true", help="运行不下载数据的短实验（默认行为）")
-    parser.add_argument("--cell", choices=["rnn", "lstm"], default="rnn")
+    parser.add_argument("--demo", action="store_true", help="运行内置短文本实验")
+    parser.add_argument("--cell", choices=["rnn", "lstm", "gru"], default="rnn")
     parser.add_argument("--steps", type=int, default=12)
     args = parser.parse_args()
     if args.steps < 1:

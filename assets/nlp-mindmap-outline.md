@@ -28,6 +28,7 @@
 ### Sequence Models
 #### RNN and Hidden State
 #### LSTM and Gates
+#### GRU and Two Gates
 #### BiLSTM and Multi-layer LSTM
 ### TextCNN (1D Convolution)
 ### NLP Tasks
@@ -35,6 +36,7 @@
 #### Text Classification
 #### Sequence Labeling
 #### Encoder-Decoder Generation
+##### Additive Attention
 ### Transformer (MHA)
 ### BERT Pre-training
 ### Mini-GPT
