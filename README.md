@@ -1,4 +1,4 @@
-# PyTorch Deep Learning Notes 深度学习学习笔记（新手可轻松复现版）
+# PyTorch Deep Learning Notes <br> 深度学习学习笔记（新手可轻松复现版）
 
 [![GitHub](https://img.shields.io/badge/GitHub-Jackksonns-blue?style=flat-square&logo=github)](https://github.com/Jackksonns)
 [![GitHub Stars](https://img.shields.io/github/stars/Jackksonns/pytorch-deep-learning-notes)](https://github.com/Jackksonns/pytorch-deep-learning-notes/stargazers)
@@ -94,19 +94,6 @@ python -m pip install -r requirements.txt
 ```bash
 cd 经典网络架构/LeNet
 python LeNet.py
-```
-
-**新增模块的基础代码检查**（在仓库根目录执行）：
-
-```bash
-python Mini-GPT/GPT.py
-python 经典网络架构/ViT/ViT.py
-python CLIP/contrastive_loss.py
-python 自编码器/DDPM/DDPM.py
-python NLP_Basics/language_model.py --demo
-python NLP_Basics/language_model.py --demo --cell gru
-python NLP_Basics/attention_seq2seq.py --demo --task reverse
-python 经典网络架构/CNN_Basics/CNN.py --demo
 ```
 
 PS：CLIP 的预训练模型推理需要额外下载模型权重。
