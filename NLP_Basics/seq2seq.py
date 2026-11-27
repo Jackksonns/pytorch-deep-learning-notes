@@ -41,16 +41,24 @@ class Seq2Seq(nn.Module):
         return torch.cat(predictions, dim=1)
 
 
+def make_demo_batch(batch_size=16, task="reverse"):
+    """生成复制或反转任务的 source、target 与右移的 Decoder 输入。"""
+    if task not in {"copy", "reverse"}:
+        raise ValueError("task must be 'copy' or 'reverse'")
+    digits = torch.randint(3, VOCAB_SIZE, (batch_size, 4))
+    source = torch.cat((digits, torch.full((batch_size, 1), EOS)), dim=1)
+    target_digits = digits.flip(1) if task == "reverse" else digits
+    target = torch.cat((target_digits, torch.full((batch_size, 1), EOS)), dim=1)
+    decoder_input = torch.cat((torch.full((batch_size, 1), BOS), target[:, :-1]), dim=1)
+    return source, target, decoder_input
+
+
 def demo(steps=20, task="reverse"):
     torch.manual_seed(42)
     model = Seq2Seq()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
     for _ in range(steps):
-        digits = torch.randint(3, VOCAB_SIZE, (16, 4))
-        source = torch.cat((digits, torch.full((16, 1), EOS)), dim=1)
-        target_digits = digits.flip(1) if task == "reverse" else digits
-        target = torch.cat((target_digits, torch.full((16, 1), EOS)), dim=1)
-        decoder_input = torch.cat((torch.full((16, 1), BOS), target[:, :-1]), dim=1)
+        source, target, decoder_input = make_demo_batch(task=task)
         logits = model(source, decoder_input)  # 教师强制：输入真实的上一词元
         loss = F.cross_entropy(logits.reshape(-1, VOCAB_SIZE), target.reshape(-1))
         optimizer.zero_grad()
@@ -66,7 +74,7 @@ def demo(steps=20, task="reverse"):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--demo", action="store_true", help="运行不下载数据的短实验（默认行为）")
+    parser.add_argument("--demo", action="store_true", help="运行内置数字序列实验")
     parser.add_argument("--task", choices=["copy", "reverse"], default="reverse")
     parser.add_argument("--steps", type=int, default=20)
     args = parser.parse_args()

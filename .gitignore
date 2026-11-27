@@ -11,3 +11,4 @@ venv/
 **/results/*.pt
 **/results/*.bin
 *.log
+NLP_Basics/results/*.png
