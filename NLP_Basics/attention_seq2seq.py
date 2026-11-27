@@ -127,7 +127,7 @@ def demo(steps=20, task="reverse"):
     model.eval()
     with torch.inference_mode():
         generated, weights = model.generate(sample)
-    output = HERE / "results" / "attention_alignment.png"
+    output = HERE / "results" / f"attention_alignment_{task}.png"
     save_attention_plot(sample[0], generated[0], weights[0], output)
     print(f"attention seq2seq {task} logits={tuple(logits.shape)} loss={loss.item():.4f}")
     print("source:", sample[0].tolist(), "generated:", generated[0].tolist())
